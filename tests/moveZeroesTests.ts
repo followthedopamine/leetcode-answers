@@ -12,4 +12,9 @@ describe("moveZeroes()", () => {
     moveZeroes(nums);
     assert.deepEqual(nums, [0]);
   });
+  it("Should work with changing index", () => {
+    let nums = [0,0,1];
+    moveZeroes(nums);
+    assert.deepEqual(nums, [1,0,0]);
+  })
 });

@@ -16,4 +16,9 @@ describe("moveZeroes()", () => {
         (0, moveZeroes_1.default)(nums);
         assert_1.default.deepEqual(nums, [0]);
     });
+    it("Should work with changing index", () => {
+        let nums = [0, 0, 1];
+        (0, moveZeroes_1.default)(nums);
+        assert_1.default.deepEqual(nums, [1, 0, 0]);
+    });
 });
