@@ -1,7 +1,8 @@
 "use strict";
+// https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submissions/
+Object.defineProperty(exports, "__esModule", { value: true });
 /*Runtime: 87 ms, faster than 82.22% of TypeScript online submissions for Two Sum II - Input Array Is Sorted.
 Memory Usage: 43.8 MB, less than 62.81% of TypeScript online submissions for Two Sum II - Input Array Is Sorted.*/
-Object.defineProperty(exports, "__esModule", { value: true });
 const twoSum = (numbers, target) => {
     let left = 0;
     let right = numbers.length - 1;
