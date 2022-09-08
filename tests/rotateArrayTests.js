@@ -13,7 +13,6 @@ describe("rotateArray()", () => {
     assert.deepEqual(nums, [3, 99, -1, -100]);
   });
   it("Should work when k is higher than nums.length", () => {
-    assert.deepEqual(rotateArray([1, 2], 5), [2, 1]);
     let nums = [1, 2];
     rotateArray(nums, 5);
     assert.deepEqual(nums, [2, 1]);
