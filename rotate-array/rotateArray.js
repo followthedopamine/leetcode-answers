@@ -9,7 +9,6 @@ const rotateArray = (nums, k) => {
   let endArray = nums.splice(endIndex);
 
   nums.unshift(...endArray);
-  return nums;
 };
 
 module.exports = rotateArray;
