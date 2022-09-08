@@ -10,10 +10,7 @@ Memory Usage: 52 MB, less than 56.94% of JavaScript online submissions for Rotat
  */
 const rotateArray = (nums, k) => {
   let endIndex = nums.length - (k % nums.length);
-  console.log(k, endIndex);
   let endArray = nums.splice(endIndex);
-  console.log(endArray, nums);
-
   nums.unshift(...endArray);
 };
 
