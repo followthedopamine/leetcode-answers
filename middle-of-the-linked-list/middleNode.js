@@ -1,15 +1,5 @@
 "use strict";
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
+// https://leetcode.com/problems/middle-of-the-linked-list/
 Object.defineProperty(exports, "__esModule", { value: true });
 const middleNode = (head) => {
     return null;
