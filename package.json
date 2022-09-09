@@ -3,7 +3,8 @@
     "mocha": "^10.0.0"
   },
   "scripts": {
-    "test": "mocha tests/**/*.js --recursive --timeout 60000 --exit"
+    "test": "mocha tests/**/*.js --recursive --timeout 60000 --exit",
+    "tsc": "tsc -p d:/Code/leetcode-answers/tsconfig.json --watch"
   },
   "devDependencies": {
     "@types/mocha": "^9.1.1",
