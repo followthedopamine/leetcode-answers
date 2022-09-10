@@ -14,12 +14,17 @@ describe("removeNthFromEnd()", () => {
     });
     it("Should remove the nth node from the end of the list with only one element in list", () => {
         const head = new ListNode_1.default(1);
-        const answer = new ListNode_1.default();
+        const answer = null;
         assert_1.default.deepEqual((0, removeNthFromEnd_1.default)(head, 1), answer);
     });
     it("Should remove the nth node from the end of the list with only two elements in list", () => {
         const head = new ListNode_1.default(1, new ListNode_1.default(2));
         const answer = new ListNode_1.default(1);
         assert_1.default.deepEqual((0, removeNthFromEnd_1.default)(head, 1), answer);
+    });
+    it("Should remove the nth node from the end of the list with only two elements in list", () => {
+        const head = new ListNode_1.default(1, new ListNode_1.default(2));
+        const answer = new ListNode_1.default(2);
+        assert_1.default.deepEqual((0, removeNthFromEnd_1.default)(head, 2), answer);
     });
 });
