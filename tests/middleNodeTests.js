@@ -17,4 +17,9 @@ describe("middleNode()", () => {
         const answer = new ListNode_1.default(4, new ListNode_1.default(5, new ListNode_1.default(6)));
         assert_1.default.deepEqual((0, middleNode_1.default)(head), answer);
     });
+    it("Should return the only node if there is one node.", () => {
+        const head = new ListNode_1.default(1);
+        const answer = new ListNode_1.default(1);
+        assert_1.default.deepEqual((0, middleNode_1.default)(head), answer);
+    });
 });

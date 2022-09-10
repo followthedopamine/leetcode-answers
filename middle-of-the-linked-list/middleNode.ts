@@ -14,11 +14,14 @@
 
 import ListNode from "./ListNode";
 
-
-
 const middleNode = (head: ListNode | null): ListNode | null => {
-    
-    return null;
-}
+  let slow: any = head;
+  let fast: any = head;
+  while (fast !== null && fast.next !== null) {
+    slow = slow.next;
+    fast = fast?.next?.next;
+  }
+  return slow;
+};
 
 export default middleNode;
