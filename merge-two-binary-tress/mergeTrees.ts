@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/merge-two-binary-trees
+
+/*Runtime: 102 ms, faster than 96.05% of TypeScript online submissions for Merge Two Binary Trees.*/
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -18,7 +21,12 @@ const mergeTrees = (
   root1: TreeNode | null,
   root2: TreeNode | null
 ): TreeNode | null => {
-  return null;
+  if (root1 === null) return root2;
+  if (root2 === null) return root1;
+  root1.val += root2.val;
+  root1.left = mergeTrees(root1.left, root2.left);
+  root1.right = mergeTrees(root1.right, root2.right);
+  return root1;
 };
 
 export default mergeTrees;

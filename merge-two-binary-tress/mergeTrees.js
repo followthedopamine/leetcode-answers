@@ -1,19 +1,14 @@
 "use strict";
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
+// https://leetcode.com/problems/merge-two-binary-trees
 Object.defineProperty(exports, "__esModule", { value: true });
 const mergeTrees = (root1, root2) => {
-    return null;
+    if (root1 === null)
+        return root2;
+    if (root2 === null)
+        return root1;
+    root1.val += root2.val;
+    root1.left = mergeTrees(root1.left, root2.left);
+    root1.right = mergeTrees(root1.right, root2.right);
+    return root1;
 };
 exports.default = mergeTrees;
