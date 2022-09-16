@@ -11,9 +11,23 @@
  *     }
  * }
  */
+
+// TODO: Find solution with less space and not O(n2)
 import ListNode from "./ListNode";
 const reverseList = (head: ListNode | null): ListNode | null => {
-  return null;
+  const arr = [];
+  let newList = new ListNode(-1);
+  const newListHead = newList;
+  while (head) {
+    arr.push(head.val);
+    head = head.next;
+  }
+  arr.reverse();
+  while (arr.length > 0) {
+    newList.next = new ListNode(arr.shift());
+    newList = newList.next;
+  }
+  return newListHead.next;
 };
 
 export default reverseList;
