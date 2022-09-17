@@ -1,7 +1,15 @@
 "use strict";
 // https://leetcode.com/problems/house-robber
 Object.defineProperty(exports, "__esModule", { value: true });
-const rob = (nuns) => {
-    return 0;
+const rob = (nums) => {
+    if (nums === null || nums.length === 0)
+        return 0;
+    let dp = new Array(nums.length);
+    dp[0] = nums[0];
+    dp[1] = Math.max(nums[0], nums[1]);
+    for (let i = 2; i < nums.length; i++) {
+        dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
+    }
+    return dp[nums.length - 1];
 };
 exports.default = rob;
