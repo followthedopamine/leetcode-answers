@@ -5,6 +5,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? */
 const climbStairs = (n) => {
-    return 0;
+    if (n === 1)
+        return 1;
+    if (n === 2)
+        return 2;
+    let arr = [1, 2];
+    for (let i = 2; i < n; i++) {
+        arr.push(arr[i - 1] + arr[i - 2]);
+    }
+    return arr[arr.length - 1];
 };
 exports.default = climbStairs;
