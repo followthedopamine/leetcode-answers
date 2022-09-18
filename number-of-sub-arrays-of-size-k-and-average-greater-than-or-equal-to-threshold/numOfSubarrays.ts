@@ -5,6 +5,24 @@ const numOfSubarrays = (
   k: number,
   threshold: number
 ): number => {
-  return 0;
+  const getAverage = (nums: number[]) => {
+    return nums.reduce((sum, num) => (sum += num)) / nums.length;
+  };
+  const temp = [];
+  let count = 0;
+  for (let i = 0; i < k; i++) {
+    temp.push(arr[i]);
+  }
+  if (getAverage(temp) >= threshold) {
+    count++;
+  }
+  for (let i = k; i < arr.length; i++) {
+    temp.push(arr[i]);
+    temp.shift();
+    if (getAverage(temp) >= threshold) {
+      count++;
+    }
+  }
+  return count;
 };
 export default numOfSubarrays;
