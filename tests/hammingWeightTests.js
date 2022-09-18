@@ -12,7 +12,4 @@ describe("hammingWeight()", () => {
     it("Should take an unsigned integer and return the number of '1' bits it has (also known as the Hamming weight).", () => {
         assert_1.default.equal((0, hammingWeight_1.default)(0o10000000), 1);
     });
-    it("Should take an unsigned integer and return the number of '1' bits it has (also known as the Hamming weight).", () => {
-        assert_1.default.equal((0, hammingWeight_1.default)(11111111111111111111111111111101), 31);
-    });
 });
