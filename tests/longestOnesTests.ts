@@ -1,5 +1,5 @@
 import assert from "assert";
-import longestOnes from "./max-consecutive-ones-iii/longestOnes";
+import longestOnes from "../max-consecutive-ones-iii/longestOnes";
 
 describe("longestOnes()", () => {
   it("Should return the maximum number of consecutive 1's in the array if you can flip at most k 0's.", () => {
