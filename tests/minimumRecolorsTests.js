@@ -12,4 +12,22 @@ describe("minimumRecolors()", () => {
     it("Should return the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.", () => {
         assert_1.default.equal((0, minimumRecolors_1.default)("WBWBBBW", 2), 0);
     });
+    it("Should return the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.", () => {
+        assert_1.default.equal((0, minimumRecolors_1.default)("BWWWBB", 6), 3);
+    });
+    it("Should return the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.", () => {
+        assert_1.default.equal((0, minimumRecolors_1.default)("WBWW", 2), 1);
+    });
+    it("Should return the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.", () => {
+        assert_1.default.equal((0, minimumRecolors_1.default)("BB", 1), 0);
+    });
+    it("Should return the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.", () => {
+        assert_1.default.equal((0, minimumRecolors_1.default)("W", 1), 1);
+    });
+    it("Should return the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.", () => {
+        assert_1.default.equal((0, minimumRecolors_1.default)("BWBBWWBBBWBWWWBWWBBWBWBBWBB", 11), 4);
+    });
+    it("Should return the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.", () => {
+        assert_1.default.equal((0, minimumRecolors_1.default)("BWWBWBBBWBBBWBBWWWBBBWBWBWBBBWWBWWWBWBBBWBBW", 27), 10);
+    });
 });
