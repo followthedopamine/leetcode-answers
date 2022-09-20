@@ -12,4 +12,7 @@ describe("divisorSubstrings()", () => {
     it("Should return the k-beauty of num.", () => {
         assert_1.default.equal((0, divisorSubstrings_1.default)(430043, 2), 2);
     });
+    it("Should return the k-beauty of num.", () => {
+        assert_1.default.equal((0, divisorSubstrings_1.default)(10, 1), 1);
+    });
 });
