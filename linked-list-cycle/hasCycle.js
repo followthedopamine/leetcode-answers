@@ -6,8 +6,12 @@ const ListNode = require("./ListNode");
  * @param {ListNode} head
  * @return {boolean}
  */
-const hasCycle = (head) => {};
-
-let qHead = new ListNode(3, new ListNode(2, new ListNode(0, new ListNode(-4))));
-
-console.log(hasCycle(qHead, 1)); // true
+const hasCycle = (head) => {
+  let fast = head;
+  while (fast && fast.next) {
+    head = head.next;
+    fast = fast.next.next;
+    if (head === fast) return true;
+  }
+  return false;
+};
