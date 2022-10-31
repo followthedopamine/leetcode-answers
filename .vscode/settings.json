@@ -6,5 +6,8 @@
     "search.exclude": {
         "**/*.js": { "when": "$(basename).ts"},
         "**/*.js.map": { "when": "$(basename)"}
+    },
+    "files.associations": {
+        "iostream": "cpp"
     }
 }
